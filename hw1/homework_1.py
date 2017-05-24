@@ -9,7 +9,17 @@ print "********** Exercise 1.2 **********"
 
 # Do your work for Exercise 1.2 here
 
-print "Not implemented" # Delete this line when you write your code!
+
+
+def display():
+    print('   |   |')
+    print('-----------')
+    print('   |   |')
+    print('-----------')
+    print('   |   |')
+
+
+display()
 
 
 print "********** Exercise 1.3 **********"
