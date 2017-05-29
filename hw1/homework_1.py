@@ -24,15 +24,38 @@ display()
 
 print "********** Exercise 1.3 **********"
 
-# Do your work for Excercise 1.3 here. Hint - how many different
-# variables will you need?
 
-print "Not implemented" # Delete this line when you write your code!
+a = '   |   |'
+b = '-----------'
+
+
+def show():
+    print a
+    print b
+    print a
+    print b
+    print a
+
+show()
+
+
+ 
+# Hint - how many different variables will you need? - Ans 2
 
 
 print "********** Exercise 1.4 **********"
 
-# Do your work for Exercise 1.4 here.
 
-print "Not implemented" # Delete this line when you write your code!
+def ui():
+    f_name = raw_input('Enter your first name: ')
+    l_name = raw_input('Enter your last name: ')
+    print('Enter your D.O.B:')
+    mo = raw_input("Month: ")
+    day = raw_input("Day: ")
+    year = raw_input("Year: ")
+    print f_name, l_name, "was born on " + mo, day, year
+
+
+ui()
+
 
