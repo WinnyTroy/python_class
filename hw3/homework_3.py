@@ -21,9 +21,15 @@
 
 # Define "Mutable" and list what data structures have this characteristic
 
+Mutable: They can be altered after update
+eg list, dictionary
+
 
 
 # Define "Immutable" and list what data structures have this characteristic
+
+Immutable: Cannot be altered after update
+eg Tuple
 
 
 
@@ -31,18 +37,14 @@
 # **********  Exercise 5.3 **********
 
 def ball_collide(ball1, ball2):
-    '''
-    Computes whether or not two balls are colliding
-    
-    ball1: a tuple of (x-coord, y-coord, radius) nums (ints or floats);
-        represents first ball
-    ball2: a tuple of (x-coord, y-coord, radius) nums (ints or floats); 
-        represents second ball
-
-    returns: True if the balls collide and False if they do not collide
-    '''
-    ##### YOUR CODE HERE #####
-
+    def ball_collide(ball_1, ball_2):
+    x1, y1, r1 = ball_1
+    x2, y2, r2 = ball_2
+    distance = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+    radiisum = r1 + r2
+    if (distance <= radiisum):
+        return True
+return False
     
 
 # Test Cases for Exercise 5.3
