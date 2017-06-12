@@ -1,5 +1,5 @@
-# Name:
-# Section:
+# Name: WInnie Kiragu
+# Section: Internship
 # homework_2.py
 
 ##### Template for Homework 2, exercises 3.1-3.4  ######
@@ -10,14 +10,16 @@
 
 import random
 import sys
+import math
 import unittest
 
 moves = ['r', 'p', 's']
 player_wins = ['pr', 'sp', 'rs']
 
-
-player1_move = sys.argv[1]
 player2_move = random.choice(moves)
+player1_move = sys.argv[1]
+
+
 
 def player1_choice_rock():
     if player1_move == 'r':
@@ -58,20 +60,27 @@ else:
 
 # *********** Exercise 3.2 ***********
 ## 1 - multadd function
-##### YOUR CODE HERE #####
+def multiadd(a, b, c):
+    return a * b + c
 
 ## 2 - Equations
 
-# angle_test = ##### YOUR CODE HERE #####
-# print "sin(pi/4) + cos(pi/4)/2 is:"
-# print angle_test
+angle_test = multiadd(math.cos(math.pi / 4), 0.5, math.sin(math.pi / 4))
+print "sin(pi/4) + cos(pi/4)/2 is:"
+print angle_test
 
-# ceiling_test = ##### YOUR CODE HERE #####
-# print "ceiling(276/19) + 2 log_7(12) is:"
-# print ceiling_test
+ceiling_test = math.ceil(276 / 19.0) + 2 * math.log(12, 7)
+print "ceiling(276/19) + 2 log_7(12) is:"
+print ceiling_test
 
 ## 3 - yikes function
-##### YOUR CODE HERE #####
+def yikes(x):
+    eToNegX = math.exp(-x)
+    sqrtTerm = math.sqrt(1 - eToNegX)
+    return multiadd(x, eToNegX, sqrtTerm)
+
+
+print "yikes(5) is " + str(yikes(5))
 
 
 # Test Cases

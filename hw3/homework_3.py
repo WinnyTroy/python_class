@@ -36,21 +36,21 @@ eg Tuple
 
 # **********  Exercise 5.3 **********
 
-def ball_collide(ball1, ball2):
-    def ball_collide(ball_1, ball_2):
+def ball_collide(ball_1, ball_2):
     x1, y1, r1 = ball_1
     x2, y2, r2 = ball_2
     distance = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
     radiisum = r1 + r2
     if (distance <= radiisum):
-        return True
-return False
+        print "True"
+    else:
+        print "False"
     
 
 # Test Cases for Exercise 5.3
-# print ball_collide((0, 0, 1), (3, 3, 1)) # Should be False
-# print ball_collide((5, 5, 2), (2, 8, 3)) # Should be True
-# print ball_collide((7, 8, 2), (4, 4, 3)) # Should be True
+print ball_collide((0, 0, 1), (3, 3, 1)) # Should be False
+print ball_collide((5, 5, 2), (2, 8, 3)) # Should be True
+print ball_collide((7, 8, 2), (4, 4, 3)) # Should be True
 
 
 # **********  Exercise 5.4 **********
