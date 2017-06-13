@@ -71,8 +71,6 @@ def word_guessed():
     '''
     global secret_word
     global letters_guessed
-
-    ####### YOUR CODE HERE ######
     pass  # This tells your code to skip this function; delete it when you
     # start working on this function
 
@@ -84,6 +82,9 @@ def print_guessed():
     '''
     global secret_word
     global letters_guessed
+    status = ''
+    matches = 0
+
 
     ####### YOUR CODE HERE ######
     pass  # This tells your code to skip this function; delete it when you
@@ -92,11 +93,26 @@ def print_guessed():
 
 def play_hangman():
     # Actually play the hangman game
+    word = get_word()
     global secret_word
     global letters_guessed
     # Put the mistakes_made variable here, since you'll only use it in this
     # function
     mistakes_made = 0
+    guessed = False
+
+    print "The word contains ", len(word), "letters"
+
+    while not guessed:
+        text = raw_input("Please enter one letter: ")
+        text = text.upper()
+
+        if guess in letters_guessed:
+            print "You already guessed" +guess
+        elif len(guess) == len(word):
+            letters_guessed.append(guess)
+            word_guessed(letters_guessed)
+
 
     # Update secret_word. Don't uncomment this line until you get to Step 8.
     # secret_word  = get_word()
