@@ -1,5 +1,5 @@
 # Name:
-# MIT Username: 
+# MIT Username:
 # 6.S189 Project 1: Hangman template
 # hangman_template.py
 
@@ -14,10 +14,11 @@ from string import *
 
 WORDLIST_FILENAME = "words.txt"
 
+
 def load_words():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
-    
+
     Depending on the size of the word list, this function may
     take a while to finish.
     """
@@ -32,7 +33,7 @@ def load_words():
     print 'Enter play_hangman() to play a game of hangman!'
     return wordlist
 
-# actually load the dictionary of words and point to it with 
+# actually load the dictionary of words and point to it with
 # the words_dict variable so that it can be accessed from anywhere
 # in the program
 words_dict = load_words()
@@ -46,7 +47,7 @@ def get_word():
     """
     Returns a random word from the word list
     """
-    word=words_dict[randrange(0,len(words_dict))]
+    word = words_dict[randrange(0, len(words_dict))]
     return word
 
 # end of helper code
@@ -56,11 +57,13 @@ def get_word():
 # CONSTANTS
 MAX_GUESSES = 6
 
-# GLOBAL VARIABLES 
-secret_word = '' # Change this 
+# GLOBAL VARIABLES
+secret_word = ''  # Change this
 letters_guessed = []
 
 # From part 3b:
+
+
 def word_guessed():
     '''
     Returns True if the player has successfully guessed the word,
@@ -70,8 +73,8 @@ def word_guessed():
     global letters_guessed
 
     ####### YOUR CODE HERE ######
-    pass # This tells your code to skip this function; delete it when you
-         # start working on this function
+    pass  # This tells your code to skip this function; delete it when you
+    # start working on this function
 
 
 def print_guessed():
@@ -81,16 +84,18 @@ def print_guessed():
     '''
     global secret_word
     global letters_guessed
-    
+
     ####### YOUR CODE HERE ######
-    pass # This tells your code to skip this function; delete it when you
-         # start working on this function
+    pass  # This tells your code to skip this function; delete it when you
+    # start working on this function
+
 
 def play_hangman():
     # Actually play the hangman game
     global secret_word
     global letters_guessed
-    # Put the mistakes_made variable here, since you'll only use it in this function
+    # Put the mistakes_made variable here, since you'll only use it in this
+    # function
     mistakes_made = 0
 
     # Update secret_word. Don't uncomment this line until you get to Step 8.
@@ -99,4 +104,5 @@ def play_hangman():
     ####### YOUR CODE HERE ######
     return None
 
-    
+
+play_hangman()
