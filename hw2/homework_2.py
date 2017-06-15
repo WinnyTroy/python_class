@@ -5,7 +5,7 @@
 ##### Template for Homework 2, exercises 3.1-3.4  ######
 
 
-# **********  Exercise 3.1 ********** 
+# **********  Exercise 3.1 **********
 
 
 import random
@@ -18,7 +18,6 @@ player_wins = ['pr', 'sp', 'rs']
 
 player2_move = random.choice(moves)
 player1_move = sys.argv[1]
-
 
 
 def player1_choice_rock():
@@ -58,71 +57,108 @@ else:
 # Test Cases for Exercise 3.1
 ##### YOUR CODE HERE #####
 
-# *********** Exercise 3.2 ***********
-## 1 - multadd function
-def multiadd(a, b, c):
-    return a * b + c
-
-## 2 - Equations
-
-angle_test = multiadd(math.cos(math.pi / 4), 0.5, math.sin(math.pi / 4))
-print "sin(pi/4) + cos(pi/4)/2 is:"
-print angle_test
-
-ceiling_test = math.ceil(276 / 19.0) + 2 * math.log(12, 7)
-print "ceiling(276/19) + 2 log_7(12) is:"
-print ceiling_test
-
-## 3 - yikes function
-def yikes(x):
-    eToNegX = math.exp(-x)
-    sqrtTerm = math.sqrt(1 - eToNegX)
-    return multiadd(x, eToNegX, sqrtTerm)
 
 
-print "yikes(5) is " + str(yikes(5))
 
 
-# Test Cases
-# x = 5
-# print "yikes(5) =", yikes(x)
 
-# ********** Exercise 3.3 **********
+# # *********** Exercise 3.2 ***********
+# # 1 - multadd function
+# def multiadd(a, b, c):
+#     return a * b + c
 
-## 1 - rand_divis_3 function
+# ## 2 - Equations
 
+# angle_test = multiadd(math.cos(math.pi / 4), 0.5, math.sin(math.pi / 4))
+# print "sin(pi/4) + cos(pi/4)/2 is:"
+# print angle_test
 
-import random
-import unittest
+# ceiling_test = math.ceil(276 / 19.0) + 2 * math.log(12, 7)
+# print "ceiling(276/19) + 2 log_7(12) is:"
+# print ceiling_test
 
-
-def rand_divis_3():
-    num = random.randint(0, 100)
-
-    print "Number selected is: ", num
-
-    if num % 3 == 0:
-        print "  True - Randomly selected number is divisible by 3"
-    else:
-        print " False - Randomly selected number is not divisible by 3"
+# # 3 - yikes function
 
 
-rand_divis_3()
+# def yikes(x):
+#     eToNegX = math.exp(-x)
+#     sqrtTerm = math.sqrt(1 - eToNegX)
+#     return multiadd(x, eToNegX, sqrtTerm)
+
+
+# print "yikes(5) is " + str(yikes(5))
+
+
+# # Test Cases
+# # x = 5
+# # print "yikes(5) =", yikes(x)
+
+# # ********** Exercise 3.3 **********
+
+# # 1 - rand_divis_3 function
+
+
+# import random
+# import unittest
+
+
+# def rand_divis_3():
+#     num = random.randint(0, 100)
+
+#     print "Number selected is: ", num
+
+#     if num % 3 == 0:
+#         print "  True - Randomly selected number is divisible by 3"
+#     else:
+#         print " False - Randomly selected number is not divisible by 3"
+
+
+# rand_divis_3()
+# # Test Cases
+# ##### YOUR CODE HERE #####
+
+# # 2 - roll_dice function - remember that a die's lowest number is 1;
+# # its highest is the number of sides it has
+
+
+# def roll_dice(sides, dice):
+#     for die in range(dice):
+#         num = random.randint(1, sides)
+#         print "Dice #" + str(die + 1) + " rolled a " + str(num) + "."
+
+
+# roll_dice(4, 2)
+
+
 # Test Cases
 ##### YOUR CODE HERE #####
 
-## 2 - roll_dice function - remember that a die's lowest number is 1;
-                            #its highest is the number of sides it has
+# def run_tests():
+#     class __unit_tests__(unittest.TestCase):
+#         def setUp(self):
+#             ###  XXX code to do setup
+#             pass
 
-def roll_dice(sides, dice):
-    for die in range(dice):
-        num = random.randint(1, sides)
-        print "Dice #" + str(die + 1) + " rolled a " + str(num) + "."
+#         def tearDown(self):
+#             ###  XXX code to do tear down
+#             pass
 
+#         def test_XXX_Test_Name(self):
+#             raise NotImplementedError('Insert test code here.')
+#             #  Examples:
+#             # self.assertEqual(fp.readline(), 'This is a test')
+#             # self.assertFalse(os.path.exists('a'))
+#             # self.assertTrue(os.path.exists('a'))
+#             # self.assertTrue('already a backup server' in c.stderr)
+#             # self.assertIn('fun', 'disfunctional')
+#             # self.assertNotIn('crazy', 'disfunctional')
+#             # with self.assertRaises(Exception):
+#             #     raise Exception('test')
 
-roll_dice(4, 2)
+#     suite = unittest.TestLoader().loadTestsFromTestCase(__unit_tests__)
+#     unittest.TextTestRunner(verbosity=2).run(suite)
 
-
-# Test Cases
-##### YOUR CODE HERE #####                            
-
+# if __name__ == '__main__':
+#     if 'test' in sys.argv[1:]:
+#         run_tests()
+# sys.exit(0)
